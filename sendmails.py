@@ -52,7 +52,7 @@ def readCodes(codes,sep):
 
 def sendMails(sender, scans_directory, codes, message_text):
     """Envoie les corrections des QCM aux étudiants"""
-    liste_codes = readCodes(codes)
+    liste_codes = readCodes(codes, sep)
     for f in os.listdir(scans_directory):
         code_corr = f.split('.')[0]
         for etudiant in liste_codes:
